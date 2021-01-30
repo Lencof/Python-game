@@ -1,7 +1,9 @@
 # Game snake
 # Go coding
-import pygame
+# __Author__ __Lencof__
 
+import pygame
+import time
 
 class Snake(object):
     """
@@ -96,3 +98,5 @@ class Snake(object):
         """ Return rectangle object of the snake head for collision detection """
 
         return pygame.Rect(self.x, self.y, self.size, self.size)
+
+#Good luck 
