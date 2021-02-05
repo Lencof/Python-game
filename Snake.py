@@ -1,11 +1,11 @@
-# Game snake
-# Go coding
 # __Author__ __Lencof__
+# Snake.py
 
-import pygame
-import time
+import pygame # use pygame
+import time # use time 
+import random # use random 
 
-class Snake(object):
+class Snake(object): # create class Snake
     """
         A Snake object.
         Members:
