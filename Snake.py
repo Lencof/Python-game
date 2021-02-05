@@ -1,102 +1,105 @@
 # __Author__ __Lencof__
 # Snake.py
 
-import pygame # use pygame
-import time # use time 
-import random # use random 
+import pygame
+import random
+pygame.init()
+clock = pygame.time.Clock()
 
-class Snake(object): # create class Snake
-    """
-        A Snake object.
-        Members:
-        x, y: store the position of the head.
-        head_img: stores the pygame.img reference.
-        length: size of the snake, 1 initially.
-        body: stores the x, y coordinate of the previous frame.
-    """
+def newfood():
+    # just generates position of food
+    if borders:
+        cord = [random.randint(2,34), random.randint(2,34)]
+    else:
+        cord = [random.randint(1,35), random.randint(1,35)]
+    if cord in snake:
+        # if the food generates on the snakes body, return another food position
+        return newfood()
+    else:
+        return cord
+    
+win = pygame.display.set_mode((360, 360))
+pygame.display.set_caption('Snake')
+running = True
+# some initialisation
+snake = [[2,10]]
+food = [random.randint(1,36), random.randint(1,36)]
+key = "right"
+### Change this setting to apply borders ###
+### it can be either True or False ###
+borders = True
 
-    def __init__(self, x, y, img):
-        """ Initialize the snake! """
-
-        self.x = x
-        self.y = y
-        self.length = 1
-        self.size = 10
-        self.body = [(x, y)]
-        self.head_img = img
-
-    def get_head(self):
-        """ Returns a tuple containing the coordinate of the head """
-
-        return (self.x, self.y)
-
-    def get_length(self):
-        """ Returns the length of the snake """
-
-        return self.length
-
-    def move(self, x, y, speed):
-        """
-            Moves the snake in x or y direction by some speed.
-            x, y can be +1 or -1, depending on the direction.
-            boost is boolean type, to apply boost.
-        """
-
-        dx = x * speed
-        dy = y * speed
-
-        self.x += dx
-        self.y += dy
-
-        self.body.append((self.x, self.y))
-
-        # remove the first instance from the body of the snake.
-        if len(self.body) > self.length:
-            del self.body[0]
-
-    def check_boundary(self, width, height):
-        """ Head wraps around to 0 """
-
-        self.x = self.x % (width-210)
-        self.y = self.y % height
-
-    def ate_itself(self):
-        """ Returns true if the snake itself """
-
-        head = (self.x, self.y)
-
-        # for every part check if the head collides with the body.
-        for part in self.body[:-1]:
-            if head == part:
-                return True
-
-        return False
-
-    def draw(self, game_display, direction, color):
-        """ Draws the snake body onto the game_display """
-
-        head = self.head_img
-
-        if direction == "right":
-            head = pygame.transform.rotate(self.head_img, 270)
-        if direction == "left":
-            head = pygame.transform.rotate(self.head_img, 90)
-        if direction == "down":
-            head = pygame.transform.rotate(self.head_img, 180)
-
-        game_display.blit(head, (self.body[-1][0], self.body[-1][1]))
-
-        for part in self.body[:-1]:
-            pygame.draw.rect(game_display, color, (part[0], part[1], self.size, self.size))
-
-    def increment_length(self):
-        """ Increment length """
-
-        self.length += 1
-
-    def get_rect(self):
-        """ Return rectangle object of the snake head for collision detection """
-
-        return pygame.Rect(self.x, self.y, self.size, self.size)
-
-#Good luck 
+# main loop
+while running:
+    clock.tick(5)
+    # get all events
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT: 
+            running = False #this quits the loop
+        elif event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_LEFT or event.key == pygame.K_a:
+                if key != "right":
+                    key = "left"
+            elif event.key == pygame.K_RIGHT or event.key == pygame.K_d:
+                if key != "left":
+                    key = "right"
+            elif event.key == pygame.K_UP or event.key == pygame.K_w:
+                if key != "down":
+                    key = "up"
+            elif event.key == pygame.K_DOWN or event.key == pygame.K_s:
+                if key != "up":
+                    key = "down"
+    # get direction based on key events
+    if key == "up":
+        head = [snake[0][0], snake[0][1]-1]
+    elif key == "down":
+        head = [snake[0][0], snake[0][1]+1]
+    elif key == "right":
+        head = [snake[0][0]+1, snake[0][1]]
+    elif key == "left":
+        head = [snake[0][0]-1, snake[0][1]]
+    else:
+        break
+    # handle border cases
+    if borders:
+        # If borders enabled,
+        # If you crash into them, then gameover
+        if head[0] not in range(2,36) or head[1] not in range(2,36):
+            running = False
+            print("Gameover")
+        # Draw the borders
+        pygame.draw.rect(win, (255,0,255),(0,0,10,360))
+        pygame.draw.rect(win, (255,0,255),(0,0,360,10))
+        pygame.draw.rect(win, (255,0,255),(350,0,10,360))
+        pygame.draw.rect(win, (255,0,255),(0,350,360,10))
+    else:
+        # If borders are disabled,
+        # The snake can pop from other side of the screen
+        if head[0] < 2:
+            head[0] = 36
+        elif head[0] > 36:
+            head[0] = 1
+        if head[1] < 1:
+            head[1] = 36
+        elif head[1] > 36:
+            head[1] = 1
+            
+    # If food is eaten, increase length and generate new food after eating
+    if head == food:
+        snake.append(snake[-1])
+        food = newfood()
+        
+    # check wether it collides with itself
+    if snake.count(head) >= 1:
+        running = False
+        print("Gameover")
+    else:
+        # else continue by moving a step further
+        snake.insert(0, head)
+        tail = snake.pop()
+        # draw all the stuff
+        pygame.draw.rect(win, (255,255,0),(food[0]*10-10, food[1]*10-10,10,10))
+        pygame.draw.rect(win, (0,0,0),(tail[0]*10-10, tail[1]*10-10,10,10))
+        pygame.draw.rect(win, (255,255,255),(head[0]*10-10, head[1]*10-10,10,10))
+    pygame.display.update()#updat
+pygame.quit()
