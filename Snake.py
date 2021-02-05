@@ -1,8 +1,8 @@
 # __Author__ __Lencof__
 # Snake.py
 
-import pygame
-import random
+import pygame # use pygame
+import random # use random
 pygame.init()
 clock = pygame.time.Clock()
 
