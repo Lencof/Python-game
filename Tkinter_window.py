@@ -1,6 +1,7 @@
 # __Author__ __Lencof__
 # Tkinter_window.py 
 
+import pyagme # use pygame
 import tkinter as tk # use tkinter  
 from tkinter import messagebox as messagebox # import messagebox
 
