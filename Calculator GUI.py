@@ -1,22 +1,22 @@
 # __Author__ __Lencof__
 # Calculator GUI.py
-from tkinter import *
+from tkinter import * # use tkinter
 from operator import add, sub, mul, truediv
   
 OPFUNC = {'+': add, '-': sub, '*': mul, '/': truediv}
   
-class ParseErr(Exception):
-    pass
+class ParseErr(Exception): # create class ParseErr(Exception)
+    pass # empty block
   
-screen = Tk()
+screen = Tk() # cteare window TK() 
   
-calc = StringVar(screen)
-calc.set("")
+calc = StringVar(screen) # assing
+calc.set("") # calc.set("")
 
   
-  def lexer(s):
-  in_int = False
-  current = []
+  def lexer(s): # create def lexer(5)
+  in_int = False # False
+  current = [] 
   tokens = []
   for cur in s:
       in in_int:
@@ -39,7 +39,7 @@ calc.set("")
   return tokens
       
   
-def parser(tokens):
+def parser(tokens): # create def parser(token)
     stack = []
     op_stack = []
     for tok in tokens:
