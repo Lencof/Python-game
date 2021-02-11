@@ -84,3 +84,5 @@ for i, line in enumerate(tab):
 buttons.pack()
 
 screen.mainloop()
+
+# need to comment out the code
