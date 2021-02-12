@@ -56,19 +56,20 @@ def parser(tokens): # create def parser(token)
     return stack[0]
 
 
-show = Frame(screen)
+show = Frame(screen) # appropriated
 
-entry = Entry(show, textvariable=calc, width="19", state="disable")
-entry.grid(column=0, row=0)
+entry = Entry(show, textvariable=calc, width="19", state="disable") # youe size
+entry.grid(column=0, row=0) # your size
 
-ac = Button(show, text='AC', width=4, height=2, command=lambda: calc.set(""))
-ac.grid(column=1, row=0)
+ac = Button(show, text='AC', width=4, height=2, command=lambda: calc.set("")) # your size
+ac.grid(column=1, row=0) # your size
 
-show.pack()
+show.pack() # close
 
 buttons = Frame(screen)
 
-tab = ["789/",
+# figures
+tab = ["789/", 
        "456*",
        "123+",
        "0.=-"]
@@ -81,6 +82,6 @@ for i, line in enumerate(tab):
             a = lambda x=case: calc.set(calc.get() + x)
         Button(buttons, text=case, width=4, height=2, command=a).grid(column=j, row=i)
 
-buttons.pack()
+buttons.pack() # close
 
-screen.mainloop()
+screen.mainloop() # close
