@@ -1,9 +1,9 @@
 # __Author__ __Lencof__
 # Calculator GUI.py
 from tkinter import * # use tkinter
-from operator import add, sub, mul, truediv
+from operator import add, sub, mul, truediv 
   
-OPFUNC = {'+': add, '-': sub, '*': mul, '/': truediv}
+OPFUNC = {'+': add, '-': sub, '*': mul, '/': truediv} # create cortege
   
 class ParseErr(Exception): # create class ParseErr(Exception)
     pass # empty block
@@ -17,8 +17,8 @@ calc.set("") # calc.set("")
   def lexer(s): # create def lexer(5)
   in_int = False # False
   current = [] 
-  tokens = []
-  for cur in s:
+  tokens = [] 
+  for cur in s: 
       in in_int:
           if cur.isdigit():
               current.append(cur)
@@ -84,5 +84,3 @@ for i, line in enumerate(tab):
 buttons.pack()
 
 screen.mainloop()
-
-# need to comment out the code
