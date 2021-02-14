@@ -1,9 +1,9 @@
 # __Author__ __Lencof__
 # Snake_modified.py
 
-import turtle
-import random
-import pygame
+import turtle # use turtle
+import random # use random
+import pygame # use pygame
 
 # head orientation
 h = [0]
@@ -51,7 +51,7 @@ def level_1(): # create def level_1():
     turtle.pu()
     turtle.goto(0,0)
     
-def start(x,y):
+def start(x,y): # create def start(x,y):
     turtle.onscreenclick(None)
     
     level_1()
@@ -101,7 +101,7 @@ def start(x,y):
     
     
 # Food
-def food(tfood):
+def food(tfood): # create def food(tfood):
     x = random.randrange(-8,8,1)
     y = random.randrange(-8,8,1)
     fcoord[0] = x
@@ -138,7 +138,7 @@ def r():
     else:
         h[0] = 0
 
-def move():
+def move(): # create def move()
     turtle.pensize(1)
     turtle.color("black")
     turtle.pu()
@@ -157,7 +157,7 @@ def move():
         pos.insert(0,[round(x),round(y)])       
         b[0] += 1
         
-def gameover():
+def gameover(): # create def gameover():
     turtle.onscreenclick(None)
     turtle.speed(0)
     turtle.pu()
@@ -172,5 +172,5 @@ def gameover():
     turtle.mainloop()
     
     
-  if __name__ == '__main__' 
+  if __name__ == '__main__' # close 
       home(0,0) 
