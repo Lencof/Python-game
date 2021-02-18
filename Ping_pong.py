@@ -148,4 +148,4 @@ while True:
         ball_dx = ball_dx * -1
         os.system("afplay paddle.wav&")
 
-exit()
+exit() # close
