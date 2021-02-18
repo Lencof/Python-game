@@ -1,8 +1,8 @@
 # __Author__ __Lencof__
 # Ping_pong.py
 
-import turtle as t
-import os
+import turtle as t # use turtle
+import os # use os
 
 # Score varibales
 
