@@ -36,4 +36,6 @@ myApp.title('MyApp')
 
 mLabel = Label(myApp,text='my label').pack()
 
-# I will add the code
+mButton = Button(myApp,text = 'OK', command = mHello).pack()
+
+#set the ment variable from the text entry box
