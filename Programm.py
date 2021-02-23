@@ -66,6 +66,3 @@ menubar.add_cascade(Label="Help",menu=helpmenu)
 myApp.config(menu=menubar)
 
 myApp.mainloop() # close
-
-
-
