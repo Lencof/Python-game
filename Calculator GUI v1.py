@@ -1,10 +1,13 @@
+# __Author__ __Lencof__
+# Calculator GUI v1.py
   
 from tkinter import *
-import parser
-import math
+import parser # use parser
+import math # use math
 
 # Parser help us to solve mathematical operation
 
+# create window
 root = Tk()
 root.title('CALCULATOR')
 root.geometry('670x450')
