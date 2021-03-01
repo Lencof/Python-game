@@ -11,18 +11,18 @@ import math # use math
 root = Tk()
 root.title('CALCULATOR')
 root.geometry('670x450')
-root.configure(bg='Blue')
+root.configure(bg='red')
 
 # get the user input and place it in the text field
 i = 0
 
-
+# create def get_variables(num:)
 def get_variables(num):
     global i
     display.insert(i, num)
     i += 1
 
-
+# create def calculate():
 def calculate():
     entire_string = display.get()
     try:
@@ -35,7 +35,7 @@ def calculate():
         clear_all()
         display.insert(0, "ERROR")
 
-
+# create def factorial():
 def factorial():
     n = int(display.get())
     fact = math.factorial(n)
@@ -141,4 +141,4 @@ Button(root, text="^2", bg="Black", fg="White", padx=25, pady=13, font=('Helveti
        command=lambda: get_operation("**2")).grid(row=5,
                                                   column=5)
 
-root.mainloop()
+root.mainloop() # cloae()
