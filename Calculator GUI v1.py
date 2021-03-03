@@ -9,9 +9,9 @@ import math # use math
 
 # create window
 root = Tk()
-root.title('CALCULATOR')
-root.geometry('670x450')
-root.configure(bg='red')
+root.title('CALCULATOR') # your name programm
+root.geometry('670x450') # your size
+root.configure(bg='red') # your color
 
 # get the user input and place it in the text field
 i = 0
