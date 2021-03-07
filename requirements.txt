@@ -1,1 +1,7 @@
-
+pygame
+tkinter
+parser
+math
+filedialog
+turtle
+messagebox
