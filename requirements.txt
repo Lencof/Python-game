@@ -5,3 +5,4 @@ math
 filedialog
 turtle
 messagebox
+PyQt5
