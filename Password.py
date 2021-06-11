@@ -1,7 +1,7 @@
 # __Author__ __Lencof__
 # Password.py
 
-import random # use random
+import random 
 
 #GENERATE TWO RANDOM STRINGS FROM THE GIVEN LIST
 def RandomString(List):
