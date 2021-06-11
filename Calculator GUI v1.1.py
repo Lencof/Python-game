@@ -2,9 +2,8 @@
 # Calculator GUI v1.1.py
   
 from tkinter import *
-import parser # use parser
-import math # use math
-import sys
+import parser 
+import math 
 import os
 
 # Parser help us to solve mathematical operation
