@@ -2,8 +2,7 @@
 # Calculator GUI.py
 
 import os
-import sys 
-from tkinter import * # use tkinter
+from tkinter import * 
 from operator import add, sub, mul, truediv 
   
 OPFUNC = {'+': add, '-': sub, '*': mul, '/': truediv} # create cortege
