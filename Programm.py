@@ -1,9 +1,9 @@
 # __Author__ __Lencof__
 # Programm.py
 
-import sys # use sys
+import os
 from tkinter import * 
-from tkinter import filedialog # use filedialog
+from tkinter import filedialog 
 
 def mHello():
     mText=ment.get()
