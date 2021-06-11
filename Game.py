@@ -2,7 +2,6 @@
 # Game.py
 
 import os 
-import sys
 from random 
 import randint 
 import choice
