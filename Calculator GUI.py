@@ -1,7 +1,6 @@
 # __Author__ __Lencof__
 # Calculator GUI.py
 
-import os
 from tkinter import * 
 from operator import add, sub, mul, truediv 
   
