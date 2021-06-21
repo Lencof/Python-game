@@ -4,7 +4,6 @@
 from tkinter import *
 import parser 
 import math 
-import os
 
 # Parser help us to solve mathematical operation
 
