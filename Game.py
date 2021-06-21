@@ -1,7 +1,6 @@
 # __Author__ __Lencof__
 # Game.py
 
-import os 
 from random 
 import randint 
 import choice
