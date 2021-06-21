@@ -2,7 +2,8 @@
 # Ping_pong.py
 
 import turtle as t 
-import os
+import pygame
+import tkinter
 
 # Score varibales
 
