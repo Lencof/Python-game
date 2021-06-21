@@ -1,6 +1,7 @@
 # __Author__ __Lencof__
 # Password.py
 
+import os
 import random 
 
 #GENERATE TWO RANDOM STRINGS FROM THE GIVEN LIST
