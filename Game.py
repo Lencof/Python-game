@@ -6,6 +6,7 @@ import randint
 import choice
 from math import sin, cos, radians
 
+import Tkinter
 import pygame
 #from pygame import Rect, Color
 #from pygame.sprite import Sprite
