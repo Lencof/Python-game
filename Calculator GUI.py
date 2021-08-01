@@ -9,13 +9,13 @@ OPFUNC = {'+': add, '-': sub, '*': mul, '/': truediv} # create cortege
 class ParseErr(Exception): # create class ParseErr(Exception)
     pass # empty block
   
-screen = Tk() # cteare window TK() 
+screen = Tk() 
   
 calc = StringVar(screen) # assing
 calc.set("") # calc.set("")
 
   
-  def lexer(s): # create def lexer(5)
+  def lexer(s): 
   in_int = False # False
   current = [] 
   tokens = [] 
