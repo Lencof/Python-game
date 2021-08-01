@@ -4,10 +4,10 @@
 from tkinter import * 
 from operator import add, sub, mul, truediv 
   
-OPFUNC = {'+': add, '-': sub, '*': mul, '/': truediv} # create cortege
+OPFUNC = {'+': add, '-': sub, '*': mul, '/': truediv} 
   
-class ParseErr(Exception): # create class ParseErr(Exception)
-    pass # empty block
+class ParseErr(Exception): 
+    pass 
   
 screen = Tk() 
   
