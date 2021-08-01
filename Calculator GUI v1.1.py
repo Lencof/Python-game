@@ -7,7 +7,7 @@ import math
 
 # Parser help us to solve mathematical operation
 
-# create window
+
 root = Tk()
 root.title('CALCULATOR') # your name programm
 root.geometry('1200x600') # your size
