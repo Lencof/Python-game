@@ -1,9 +1,9 @@
 # __Author__ __Lencof__
 # Snake_modified.py
 
-import turtle # use turtle
-import random # use random
-import pygame # use pygame
+import turtle 
+import random 
+import pygame 
 
 # head orientation
 h = [0]
@@ -18,7 +18,7 @@ fcoord = [0,0,0]
 # position
 pos = []
 
-def home(x,y): # create def home(x,y):
+def home(x,y): 
     x = 0
     y = 0
     a[0] = 0
