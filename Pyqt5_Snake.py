@@ -6,7 +6,6 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 import random
 
-# create SnakeGame(QmainWindow):
 class SnakeGame(QMainWindow):
     def __init__(self):
         super(SnakeGame, self).__init__()
@@ -25,7 +24,6 @@ class SnakeGame(QMainWindow):
         self.sboard.start()
         self.show()
 
-# create class Board(QFrame):
 class Board(QFrame):
     msg2statusbar = pyqtSignal(str)
     SPEED = 70 # your SPEEE
