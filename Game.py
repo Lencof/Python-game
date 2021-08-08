@@ -1,6 +1,7 @@
 # __Author__ __Lencof__
 # Game.py
 
+import os
 import sys
 from random 
 import randint 
