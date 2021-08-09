@@ -4,6 +4,7 @@
 import turtle 
 import random 
 import pygame 
+import Tkinter
 
 # head orientation
 h = [0]
