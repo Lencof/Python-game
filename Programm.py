@@ -1,6 +1,7 @@
 # __Author__ __Lencof__
 # Programm.py
 
+import pygame
 from tkinter import * 
 from tkinter import filedialog 
 
