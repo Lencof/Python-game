@@ -10,7 +10,7 @@ import math
 root = Tk()
 root.title('CALCULATOR') 
 root.geometry('1200x600') 
-root.configure(bg='red') # your color
+root.configure(bg='red') 
 
 # get the user input and place it in the text field
 i = 0
