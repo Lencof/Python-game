@@ -26,9 +26,9 @@ class SnakeGame(QMainWindow):
 
 class Board(QFrame):
     msg2statusbar = pyqtSignal(str)
-    SPEED = 70 # your SPEEE
-    WIDTHINBLOCKS = 60 # your WIDTHINBLOCK
-    HEIGHTINBLOCKS = 30 # your HEIGHTINBLOCKS
+    SPEED = 70 
+    WIDTHINBLOCKS = 60 
+    HEIGHTINBLOCKS = 30 
 
     def __init__(self, parent):
         super(Board, self).__init__(parent)
