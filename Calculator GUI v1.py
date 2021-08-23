@@ -8,7 +8,7 @@ import math
 # Parser help us to solve mathematical operation
 
 root = Tk()
-root.title('CALCULATOR') # your name programm
+root.title('CALCULATOR') 
 root.geometry('670x450') # your size
 root.configure(bg='red') # your color
 
