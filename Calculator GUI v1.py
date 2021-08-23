@@ -9,19 +9,19 @@ import math
 
 root = Tk()
 root.title('CALCULATOR') 
-root.geometry('670x450') # your size
-root.configure(bg='red') # your color
+root.geometry('670x450') 
+root.configure(bg='red') 
 
-# get the user input and place it in the text field
+
 i = 0
 
-# create def get_variables(num:)
+
 def get_variables(num):
     global i
     display.insert(i, num)
     i += 1
 
-# create def calculate():
+
 def calculate():
     entire_string = display.get()
     try:
