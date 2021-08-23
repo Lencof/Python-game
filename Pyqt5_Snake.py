@@ -133,7 +133,7 @@ class Board(QFrame):
                 self.drop_food()
                 self.grow_snake = True
 
-    # create def drop_food(self):            
+               
     def drop_food(self):
         x = random.randint(3, 58)
         y = random.randint(3, 38)
@@ -150,4 +150,4 @@ def main():
 
 
 if __name__ == '__main__':
-    main() # exit()
+    main() 
