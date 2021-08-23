@@ -142,7 +142,6 @@ class Board(QFrame):
                 self.drop_food()
         self.food.append([x, y])
 
-# create def main():
 def main():
     app = QApplication([])
     launch_game = SnakeGame()
