@@ -34,7 +34,6 @@ def calculate():
         clear_all()
         display.insert(0, "ERROR")
 
-# create def factorial():
 def factorial():
     n = int(display.get())
     fact = math.factorial(n)
@@ -42,7 +41,6 @@ def factorial():
     display.insert(0, fact)
 
 
-# adding functionality
 def get_operation(operator):
     global i
     length = len(operator)
