@@ -5,8 +5,7 @@ import os, sys, choice, randint
 from random 
 from math import sin, cos, radians
 
-import Tkinter
-import pygame
+import Tkinter, pygame
 #from pygame import Rect, Color
 #from pygame.sprite import Sprite
 #you already imported pygame, why import modules twice? Your code will run faster if 
