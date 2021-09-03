@@ -1,11 +1,9 @@
 # __Author__ __Lencof__
 # Game.py
 
-import os
-import sys
+import os, sys, choice
 from random 
 import randint 
-import choice
 from math import sin, cos, radians
 
 import Tkinter
