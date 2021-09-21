@@ -16,7 +16,7 @@ calc.set("")
 
   
   def lexer(s): 
-  in_int = False # False
+  in_int = False 
   current = [] 
   tokens = [] 
   for cur in s: 
