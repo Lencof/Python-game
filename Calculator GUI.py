@@ -65,7 +65,7 @@ entry.grid(column=0, row=0) # your size
 ac = Button(show, text='AC', width=4, height=2, command=lambda: calc.set("")) # your size
 ac.grid(column=1, row=0) # your size
 
-show.pack() # close
+show.pack() 
 
 buttons = Frame(screen)
 
