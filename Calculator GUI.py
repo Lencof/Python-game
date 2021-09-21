@@ -59,8 +59,8 @@ def parser(tokens):
 
 show = Frame(screen) 
 
-entry = Entry(show, textvariable=calc, width="19", state="disable") # youe size
-entry.grid(column=0, row=0) # your size
+entry = Entry(show, textvariable=calc, width="19", state="disable") 
+entry.grid(column=0, row=0) 
 
 ac = Button(show, text='AC', width=4, height=2, command=lambda: calc.set("")) # your size
 ac.grid(column=1, row=0) # your size
