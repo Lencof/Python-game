@@ -57,7 +57,7 @@ def parser(tokens):
     return stack[0]
 
 
-show = Frame(screen) # appropriated
+show = Frame(screen) 
 
 entry = Entry(show, textvariable=calc, width="19", state="disable") # youe size
 entry.grid(column=0, row=0) # your size
