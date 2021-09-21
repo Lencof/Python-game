@@ -11,8 +11,8 @@ class ParseErr(Exception):
   
 screen = Tk() 
   
-calc = StringVar(screen) # assing
-calc.set("") # calc.set("")
+calc = StringVar(screen) 
+calc.set("") 
 
   
   def lexer(s): 
@@ -40,7 +40,7 @@ calc.set("") # calc.set("")
   return tokens
       
   
-def parser(tokens): # create def parser(token)
+def parser(tokens):
     stack = []
     op_stack = []
     for tok in tokens:
