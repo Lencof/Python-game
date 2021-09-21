@@ -138,4 +138,4 @@ Button(root, text="^2", bg="Black", fg="White", padx=25, pady=13, font=('Helveti
        command=lambda: get_operation("**2")).grid(row=5,
                                                   column=5)
 
-root.mainloop() # cloae()
+root.mainloop() 
