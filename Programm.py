@@ -29,7 +29,6 @@ myApp = tk()
 # create a string variable
 ment = StringVar()
 
-# set the size of window
 myApp.geometry('450x450+200+200')
 
 myApp.title('MyApp')
