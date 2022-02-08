@@ -4,8 +4,6 @@
 from tkinter import *
 import parser, math 
 
-# Parser help us to solve mathematical operation
-
 root = Tk()
 root.title('CALCULATOR') 
 root.geometry('1200x600') 
