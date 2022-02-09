@@ -25,13 +25,13 @@
 <body>
 <canvas width="400" height="400" id="game"></canvas>
 <script>
-var canvas = document.getElementById('game');
-var context = canvas.getContext('2d');
+let canvas = document.getElementById('game');
+let context = canvas.getContext('2d');
 
-var grid = 16;
-var count = 0;
+let grid = 16;
+let count = 0;
   
-var snake = {
+let snake = {
   x: 160,
   y: 160,
   
@@ -45,7 +45,7 @@ var snake = {
   // length of the snake. grows when eating an apple
   maxCells: 4
 };
-var apple = {
+let apple = {
   x: 320,
   y: 320
 };
