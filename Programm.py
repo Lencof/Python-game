@@ -26,7 +26,6 @@ def mQuit():
         
         
 myApp = tk()
-# create a string variable
 ment = StringVar()
 
 myApp.geometry('450x450+200+200')
