@@ -4,7 +4,6 @@
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
-import random
 
 class SnakeGame(QMainWindow):
     def __init__(self):
