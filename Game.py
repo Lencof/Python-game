@@ -1,7 +1,7 @@
 # __Author__ __Lencof__
 # Game.py
 
-import os, sys, choice, randint 
+import os, sys, choice
 from random 
 from math import sin, cos, radians
 
